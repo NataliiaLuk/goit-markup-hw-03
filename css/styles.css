@@ -61,9 +61,23 @@ img {
     font-family: inherit;
     cursor: pointer;
 }
+
+.visually-hidden:not(:focus):not(:active) {
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
 /* header styles */
 .header {
     border-bottom: 1px solid var(--border-cl);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
 }
 
 .navigation {
@@ -164,13 +178,14 @@ img {
 /* secrion hero */
 .hero {
     background-color: var(--dark-bg);
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 
-.hero .container {
-    padding-bottom: 106px;
-}
+
 .hero-title {
-    padding-top: 106px;
+    margin: 0 auto;
+    width: 696px;
     margin-bottom: 30px;
     color: var(--white-cl);
         text-align: center;
@@ -206,9 +221,6 @@ img {
     display:flex
 }
 
-.hidden-title {
-    display: none;
-}
 
 .list-item {
     width: 270px;
@@ -290,9 +302,10 @@ img {
     margin-right: 0;
 }
 
-.member .photo {
-    margin-bottom: 30px;
-}
+ .member-descr {
+    padding-top: 30px;
+    padding-bottom: 30px;
+ }
 .member-name {
     margin-bottom: 10px;
 
@@ -305,7 +318,6 @@ img {
 }
 
 .member-position {
-    margin-bottom: 30px;
 
     color: var(--main-cl);
         text-align: center;
@@ -331,6 +343,7 @@ img {
 }
 
 .address {
+    margin-top: 20px;
     display: block;
     color: var(--white-cl);
         font-size: 14px;
@@ -342,7 +355,6 @@ img {
 
 .text-address {
     width: 231px;
-    margin-top: 20px;
     margin-bottom: 9px;
 }
 
@@ -367,13 +379,13 @@ img {
 }
 
 /* Portfolio section */
-
-.gallery .filter {
+.filter.list {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 50px;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
 }
+
 
 .filter .item {
     margin-right: 8px;
@@ -420,14 +432,14 @@ img {
 }
 
 .card-bottom{
+    padding: 20px 24px;
    border-bottom: 1px solid #EEE;;
    border-right: 1px solid #EEE;;
    border-left: 1px solid #EEE;;
 }
 
 .cards-title {
-    padding-top: 20px;
-    margin: 0 24px;
+    margin-bottom: 4px;
     color: var(--title-cl);
         font-size: 18px;
         line-height: 2;
@@ -435,7 +447,7 @@ img {
 }
 
 .cards-descr {
-    margin: 0 24px 20px;
+
     color: var(--main-cl);
         font-size: 16px;
         line-height: 1.87;
